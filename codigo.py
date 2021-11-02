@@ -29,7 +29,6 @@ fig1.update_yaxes(showgrid=False)
 fig3_v1.show()
 
 #4
-#4
 df4 = albums_df.groupby(['genre', 'year_of_pub'], as_index=False).agg({'num_of_sales':'sum', 'id':'count'})
 df_sales_per_genre = albums_df.groupby(['genre']).agg({'num_of_sales':'sum'})
 df_top_8_sales = df_sales_per_genre.sort_values(by='num_of_sales', ascending=False).iloc[:8]
