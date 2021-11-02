@@ -49,5 +49,44 @@ fig1.update_xaxes(showgrid=False)
 fig1.update_yaxes(showgrid=False)
 fig4_v3.show()
 
+#5
+df5_albums = albums_df.groupby(['artist_id'], as_index=False).agg({'num_of_sales':'mean', 'rolling_stone_critic':'mean', 'id':'count',})
+df5_artist = artists_df.loc[:, ['id', 'real_name', 'art_name', 'role']]
+
+df5 = pd.merge(left=df5_albums, right=df5_artist, left_on=['artist_id'], right_on=['id'], how='inner', suffixes=('_album', '_artist'))
+
+df5 = df5.loc[
+    (df5['role'] == 'rapper') 
+    & (df5['id_album'] >= 4)]
+
+fig5= px.scatter(df5, x='num_of_sales', y='rolling_stone_critic',hover_name='real_name', hover_data=['art_name'],size='id_album', size_max=10,
+color_discrete_sequence=px.colors.qualitative.T10,template='plotly_white')
+fig5.update_layout(title={'text' : 'Rappers com carreia consolidada - Desempenho Comercial x Desempenho Crítica','y': 0.9,'x': 0.5},
+    yaxis_title='Média de nota na Rolling Stone',
+    xaxis_title='Média de Receita/álbum do artista'
+)
+fig1.update_xaxes(showgrid=False)
+fig1.update_yaxes(showgrid=False)
+fig5.show()
+
+# 6
+df6 = albums_df.groupby(['genre'], as_index=False).agg({'rolling_stone_critic':'mean', 'mtv_critic':'mean', 'music_maniac_critic':'mean'})
+df6 = pd.melt(df6, id_vars=['genre'], value_vars=['rolling_stone_critic', 'mtv_critic', 'music_maniac_critic'])
+df6.head()
+df6.loc[:, 'rank'] = df6.groupby(['variable'])['value'].rank(ascending=False)
+df6 = df6.loc[df6['rank'] <= 5]
+
+fig6_v2 = px.bar(df6, y='rank', x='value', facet_col='variable', orientation='h', text='genre')
+fig6_v2.update_yaxes(
+    autorange='reversed',
+    tickprefix='Top '
+    )
+fig6_v2.update_xaxes(title='Média do Gênero')
+fig6_v2.update_layout(   
+    title='Gêneros favoritos da crítica especializada', 
+    yaxis_title='Ranking'
+)
+fig6_v2.show()
+fig6_v2.show()
 
 
