@@ -1,34 +1,36 @@
-# Respondendo perguntas de negócios com representações gráficas.
+# Interactive Data Visualizations
 
+Este repositório contém exemplos práticos de uso das bibliotecas **Plotly** e **Pandas** para criar visualizações de dados interativas em Python.
 
-## Pergunta 1
-Quais os anos de pior e maior sucesso crítico dos álbuns da Black Bear Records na MTV?
+## Descrição do Projeto
 
-## Pergunta 2
-Quantos artistas de cada tipo (role) temos no catálogo?
+O objetivo do projeto **Interactive Data Visualizations** é mostrar como integrar a manipulação de dados com **Pandas** e gerar visualizações dinâmicas com **Plotly**. Inclui gráficos interativos que podem ser personalizados e explorados em dashboards.
 
-## Pergunta 3
-A maioria dos artistas tem quantos álbuns lançados?
+## Tecnologias Utilizadas
 
-## Pergunta 4
-Como tem sido o desempenho comercial anual dos principais gêneros musicais?
+- **Python**
+- **Pandas**
+- **Plotly**
 
-## Pergunta 5
-Quais rappers com carreira consolidada (pelo menos 4 álbuns) tem bom desempenho comercial e sucesso na Rolling Stone?
+## Estrutura do Repositório
 
-## Pergunta 6
-Quais dos gêneros do nosso catálogo são os favoritos de cada veículo de crítica especializada?
+- `notebooks/`: Exemplos práticos em Jupyter Notebooks.
+- `data/`: Conjuntos de dados utilizados.
+- `scripts/`: Scripts Python para geração de gráficos.
 
-###### Representação Gráfica 1
-![giphy](https://github.com/Giovanacarmazio/Plotly_Pandas_2/blob/7d9071c314a0df3d29b1a57bbb591c8ca8c542bf/newplot.png)
-###### Representação Gráfica 2
-![giphy](https://github.com/Giovanacarmazio/Plotly_Pandas_2/blob/7d9071c314a0df3d29b1a57bbb591c8ca8c542bf/newplot%20(1).png)
-###### Representação Gráfica 3
-![giphy](https://github.com/Giovanacarmazio/Plotly_Pandas_2/blob/7d9071c314a0df3d29b1a57bbb591c8ca8c542bf/newplot%20(2).png)
-###### Representação Gráfica 4
-![giphy](https://github.com/Giovanacarmazio/Plotly_Pandas_2/blob/7d9071c314a0df3d29b1a57bbb591c8ca8c542bf/newplot%20(3).png)
-###### Representação Gráfica 5
-![giphy](https://github.com/Giovanacarmazio/Plotly_Pandas_2/blob/7d9071c314a0df3d29b1a57bbb591c8ca8c542bf/newplot%20(4).png)
-###### Representação Gráfica 6
-![giphy](https://github.com/Giovanacarmazio/Plotly_Pandas_2/blob/7d9071c314a0df3d29b1a57bbb591c8ca8c542bf/newplot%20(5).png)
+## Como Executar
 
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Giovanacarmazio/Plotly_Pandas_2.git
+   ```
+
+2. Execute os notebooks:
+   ```bash
+   jupyter notebook
+   ```
+
+## Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir *issues* ou enviar *pull requests*.
+```
